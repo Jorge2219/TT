@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con estilo Bootstrap</title>
+    <!-- Incluye la hoja de estilos de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Agrega la fuente de Google Fonts para Montserrat -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        /* Regla de estilo personalizada para cambiar el color del thead */
+        .custom-thead {
+            background-color: #4f1212;
+            color: white; /* Cambia el color del texto si es necesario */
+        }
+
+        /* Regla de estilo para cambiar la fuente a Montserrat */
+        body, h1, th, td {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <img src="../img/LogoIPN.png" alt="Logo Izquierdo" class="img-fluid" width="60">
+            </div>
+            <div class="col-md-6 d-flex justify-content-end align-items-center">
+                <img src="../img/LogoUPIIZ.png" alt="Logo Derecho" class="img-fluid" width="100">
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col text-center">
+                <input type="text" id="tituloInput" class="form-control title" placeholder="Ingrese el título">
+            </div>
+        </div>
+        <h1 id="titulo" class="text-center mb-4">Encuesta de satisfacción a estudiantes</h1>
+
+        <!-- Tabla adicional -->
+        <div class="row">
+            <!-- Columna izquierda -->
+            <div class="col-md-6">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Unidad:</th>
+                            <td>Unidad Profesional Interdisciplinaria de Ingeniería campus Zacateccas (UPIIZ)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Trámite o Servicio:</th>
+                            <td>Actividades culturales y/o deportivas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Columna derecha -->
+            <div class="col-md-6">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Folio No.:</th>
+                            <td>001</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Fecha:</th>
+                            <td>11 de junio de 2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Tabla principal -->
+        <table id="miTabla" class="table">
+            <thead class="custom-thead"> <!-- Utiliza la clase personalizada para el thead -->
+                <tr>
+                    <th colspan="4" scope="col">Encabezado largo</th>
+                </tr>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Mike</td>
+                    <td>Smith</td>
+                    <td>35</td>
+                </tr>
+                <!-- Botón para agregar nuevas filas -->
+                <tr>
+                    <td colspan="4">
+                        <button id="agregarFila" class="btn btn-primary">+</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Caja de comentarios -->
+        <div class="jumbotron">
+            <h3>Comentarios</h3>
+            <textarea class="form-control" rows="4" placeholder="Escribe tus comentarios aquí"></textarea>
+            <button class="btn btn-primary mt-3">Enviar</button>
+        </div>
+    </div>
+    <!-- Incluye el script de JavaScript -->
+    <script src="../js/CrearNuevaEncuesta.js"></script>
+    <!-- Incluye el script de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
